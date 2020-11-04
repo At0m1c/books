@@ -7,7 +7,6 @@ $database = '';
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "Connected successfully";
 
     if ($_GET['create'] == '1') {
         $conn->exec('CREATE TABLE IF NOT EXISTS authors(
