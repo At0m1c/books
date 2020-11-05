@@ -68,7 +68,6 @@ try {
     $strPage = ceil($numRows / $limit);
 
     // или 2 вариант отдельно книги и авторы, работает быстрее
-    $number = ($limit * $page) - $limit;
     $query1 = $conn->query("SELECT title, author_id, status, date 
         FROM books 
         WHERE status = 2 
